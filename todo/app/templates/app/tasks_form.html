@@ -1,0 +1,25 @@
+{%extends 'main.html'%}
+{%block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Task</title>
+</head>
+<body>
+    <h1 style="font-size: 50px; font-family: poppins;">Edit task</h1>
+
+    <form method="post" >
+        {% csrf_token %}
+        {{ form.as_p }}
+       <div class="fut" style="display: flex; justify-content: space-between; padding-bottom: 10px;">
+        <button type="submit" style="font-size: 16px; line-height: 24px; color: white; background-color: black; border-radius: 5px; padding: 10px 20px; ">Submit</button>
+        
+    </div>
+       
+    </form>
+    
+
+</body>
+</html>
+{%endblock%}

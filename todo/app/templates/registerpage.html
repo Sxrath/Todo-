@@ -1,0 +1,23 @@
+{%extends 'main.html'%}
+{%block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body >
+    <h1 style="font-size: 50px; font-family: poppins;">Register here..</h1>
+    <form action="" method="post" style="padding-bottom:20px">
+        {%csrf_token%}
+        {{form.as_p}}
+       
+        <div class="su" style="display: flex; height: 50px; justify-content: space-between;">
+            <button type="submit" style="font-size: 16px; line-height: 24px; color: white; background-color: black; border-radius: 5px; padding: 10px 20px;">Submit</button>
+        <h3><a href="{% url 'login' %}" style="text-decoration: none; color: rgb(15, 13, 13); font-family: poppins;">Login</a></h3>
+        </div>
+    </form>
+</body>
+</html> 
+{%endblock%}

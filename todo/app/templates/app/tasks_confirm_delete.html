@@ -1,0 +1,26 @@
+{%extends 'main.html'%}
+{%block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Task Deletion</title>
+</head>
+<body>
+    
+    <h1 style="font-size: 40px; font-family: poppins;">Confirm Task Deletion</h1>
+    <h4>Are you sure you want to delete the task?</h4>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="foot" style="display: flex; justify-content: space-between; height: 50px; padding-bottom: 10px;"> 
+            <button type="submit" style="font-size: 16px; line-height: 24px; color: white; background-color: black; border-radius: 5px; padding: 10px 20px;">Confirm</button>
+            <h3><a href="{% url 'tasks' %}" style="text-decoration: none; color: rgb(15, 13, 13); font-family: poppins;">Cancel</a></h3>
+        </div>
+            
+    
+    
+        
+    </body>
+    </html>
+    </form>
+    {%endblock%}
